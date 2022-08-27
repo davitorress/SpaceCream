@@ -1,0 +1,42 @@
+main {
+	width: 100%;
+}
+
+.wrapper {
+	margin: 1.5rem 3.2rem;
+
+	display: flex;
+	flex-direction: column;
+	gap: 6.4rem;
+}
+
+.products {
+	display: grid;
+	gap: 3.2rem;
+}
+
+.card {
+	position: relative;
+}
+
+.card img {
+	width: 100%;
+	object-fit: cover;
+
+	border-radius: 2rem;
+}
+
+.card h2 {
+	top: 1.6rem;
+	right: 1.6rem;
+	position: absolute;
+
+	height: 3.8rem;
+	padding: 0 2.4rem;
+
+	display: inline-flex;
+	align-items: center;
+
+	border-radius: 2rem;
+	background-color: var(--soft);
+}
