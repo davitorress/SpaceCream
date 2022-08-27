@@ -1,9 +1,10 @@
 main {
 	width: 100%;
+	height: 100%;
 }
 
 .wrapper {
-	margin: 1.5rem 3.2rem;
+	margin: 1.5rem 3.2rem 3.2rem;
 
 	display: flex;
 	flex-direction: column;
@@ -12,7 +13,7 @@ main {
 
 .products {
 	display: grid;
-	gap: 3.2rem;
+	gap: 3rem;
 }
 
 .card {
@@ -39,4 +40,84 @@ main {
 
 	border-radius: 2rem;
 	background-color: var(--soft);
+}
+
+@media screen and (min-width: 430px) {
+	.products {
+		grid-template-rows: repeat(4, calc(100% / 4));
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas:
+			"A B"
+			"A C"
+			"D E"
+			"D F";
+	}
+
+	.products .card img {
+		height: 100%;
+		max-height: 100%;
+	}
+
+	.products .card:nth-child(1) {
+		grid-area: A;
+	}
+	.products .card:nth-child(2) {
+		grid-area: B;
+	}
+	.products .card:nth-child(4) {
+		grid-area: C;
+	}
+
+	.products .card:nth-child(5) {
+		grid-area: D;
+	}
+	.products .card:nth-child(3) {
+		grid-area: E;
+	}
+	.products .card:nth-child(6) {
+		grid-area: F;
+	}
+}
+
+@media screen and (min-width: 770px) {
+	main {
+		padding: 3.2rem 4rem;
+	}
+
+	.wrapper p {
+		display: none;
+	}
+
+	.products {
+		position: relative;
+		max-height: 60rem;
+
+		gap: 2rem;
+		grid-template-rows: 33% 33% 33%;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-areas:
+			"A C E"
+			"B C F"
+			"B D F";
+	}
+
+	.products .card:nth-child(1) {
+		grid-area: A;
+	}
+	.products .card:nth-child(2) {
+		grid-area: B;
+	}
+	.products .card:nth-child(3) {
+		grid-area: C;
+	}
+
+	.products .card:nth-child(4) {
+		grid-area: D;
+	}
+	.products .card:nth-child(5) {
+		grid-area: E;
+	}
+	.products .card:nth-child(6) {
+		grid-area: F;
+	}
 }

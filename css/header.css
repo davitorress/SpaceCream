@@ -27,3 +27,27 @@ header .title h1 {
 	letter-spacing: 0.05em;
 	text-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
 }
+
+header > div {
+	width: 100%;
+}
+
+header .description {
+	display: none;
+}
+
+@media screen and (min-width: 770px) {
+	header {
+		width: 100%;
+		height: 100%;
+	}
+
+	header .description {
+		display: block;
+		padding: 2rem 1.5rem;
+
+		color: #fff;
+		font-size: 2.4rem;
+		line-height: 2rem;
+	}
+}
