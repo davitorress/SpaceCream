@@ -25,6 +25,9 @@ main {
 	object-fit: cover;
 
 	border-radius: 2rem;
+
+	transition: all 0.7s ease-in;
+	animation: to-top 0.7s forwards;
 }
 
 .card h2 {
@@ -40,6 +43,34 @@ main {
 
 	border-radius: 2rem;
 	background-color: var(--soft);
+
+	opacity: 0;
+	transition: all 0.7s ease-in;
+	animation: to-down 0.7s 0.7s forwards;
+}
+
+@keyframes to-top {
+	0% {
+		opacity: 0;
+		transform: translateY(100%);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes to-down {
+	0% {
+		opacity: 0;
+		transform: translateY(-100%);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 @media screen and (min-width: 430px) {
